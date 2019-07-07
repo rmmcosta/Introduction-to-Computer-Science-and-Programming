@@ -18,10 +18,14 @@ def findElemOptim(list,elem):
 
 def findElemOptimFinal(list,elem):
     #print(list)
+    #input()
     min = 0
     max = len(list)
     guess = int((max-min)/2)
-    #print('guess:'+str(guess))
+    print('guess: '+str(guess) + ' min: ' + str(min) + ' max: ' + str(max))
+    
+    if len(list) == 0:
+        return False
     if list[guess] == elem:
         return True
     if max <= 1:
@@ -31,7 +35,14 @@ def findElemOptimFinal(list,elem):
     else:
         return findElemOptimFinal(list[min:guess],elem)
 
+def testFindOptimFinal(size,elem):
+    l1 = list(range(size))
+    #print(l1)
+    print(findElemOptimFinal(l1,elem))
+
 def testFind():
+    '''make some tests to, find values inside a given list
+    '''
     size=""
     while(not size.isdigit()):
         size=input('what is the size of list?')
@@ -49,77 +60,77 @@ def testFind():
     [11, 12, 13, 14, 15, 16]
     '''
     
-    l1=list(range(0,size*2,2))
-    print(l1)
+    l1=list(range(size))
+    #print(l1)
     
-    input()
+    input('press enter')
     print('find 15')
     print(findElem(l1,15))
-    input()
+    input('press enter')
     print(findElemOptim(l1,15))
-    input()
+    input('press enter')
     print(findElemOptimFinal(l1,15))
     
-    input()
+    input('press enter')
     print('find 5')
     print(findElem(l1,5))
-    input()
+    input('press enter')
     print(findElemOptim(l1,5))
-    input()    
+    input('press enter')    
     print(findElemOptimFinal(l1,5))
     
-    input()
+    input('press enter')
     print('find 4')
     print(findElem(l1,4))
-    input()
+    input('press enter')
     print(findElemOptim(l1,4))
-    input()    
+    input('press enter')    
     print(findElemOptimFinal(l1,4))
 
-    input()
+    input('press enter')
     print('find 8')
     print(findElem(l1,8))
-    input()
+    input('press enter')
     print(findElemOptim(l1,8))   
-    input() 
+    input('press enter') 
     print(findElemOptimFinal(l1,8))
 
-    input()
+    input('press enter')
     print('find 2')
     print(findElem(l1,2))
-    input()
+    input('press enter')
     print(findElemOptim(l1,2)) 
-    input()   
+    input('press enter')   
     print(findElemOptimFinal(l1,2))
     
-    input()
+    input('press enter')
     print('find 10')
     print(findElem(l1,10))
-    input()
+    input('press enter')
     print(findElemOptim(l1,10)) 
-    input()   
+    input('press enter')   
     print(findElemOptimFinal(l1,10))
 
-    input()
+    input('press enter')
     print('find 0')
     print(findElem(l1,0))
-    input()
+    input('press enter')
     print(findElemOptim(l1,0))   
-    input() 
+    input('press enter') 
     print(findElemOptimFinal(l1,0))
     
-    input()
+    input('press enter')
     print('find 1')
     print(findElem(l1,1))
-    input()
+    input('press enter')
     print(findElemOptim(l1,1))    
-    input()
+    input('press enter')
     print(findElemOptimFinal(l1,1))
 
-    input()
+    input('press enter')
     print('find 9')
     print(findElem(l1,9))
-    input()
+    input('press enter')
     print(findElemOptim(l1,9))    
-    input()
+    input('press enter')
     print(findElemOptimFinal(l1,9))
