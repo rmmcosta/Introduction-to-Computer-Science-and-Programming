@@ -10,6 +10,7 @@ def merge(left,right):
         else:
             result.append(right[j])
             j+=1
+            
     #now we need to append the left numbers in one of the lists
     while(i<lenLeft):
         result.append(left[i])
