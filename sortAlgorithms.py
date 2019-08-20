@@ -31,7 +31,7 @@ def testMySimpleSort():
     print(mySimpleSort(l4))
 
 def selectionSort(theList):
-    #use to cycles to run through the list
+    #use two cycles to run through the list
     listLen = len(theList)
     for i in range(listLen):
         minIdx = i
