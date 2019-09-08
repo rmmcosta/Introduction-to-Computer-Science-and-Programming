@@ -98,7 +98,7 @@ def nottake(availW,accV,currIdx,weights,values,bagcapacity,finallist,intermlist)
     else:
         intermlist = []
         
-def testKnapSack():
+def testknapsack():
     global numcalls
     numcalls=0
     w = (5,3,2)
@@ -108,7 +108,7 @@ def testKnapSack():
     print('total calls:')
     print(numcalls)
 
-def testKnapSack1():
+def testknapsack1():
     global numcalls
     numcalls=0
     w = (5,3,2,10,15)
@@ -118,7 +118,7 @@ def testKnapSack1():
     print('total calls:')
     print(numcalls)
 
-def testKnapSack2():
+def testknapsack2():
     global numcalls
     numcalls=0
     w = (1,5,3,4)
@@ -128,7 +128,7 @@ def testKnapSack2():
     print('total calls:')
     print(numcalls)
 
-def testKnapSack3():
+def testknapsack3():
     global numcalls
     numcalls=0
     w = (1,1,5,5,3,3,4,4)
@@ -138,12 +138,22 @@ def testKnapSack3():
     print('total calls:')
     print(numcalls)
 
-def testKnapSack3():
+def testknapsack4():
     global numcalls
     numcalls=0
     w = (1,1,5,5,3,3,4,4)
     v = (15,15,10,10,9,9,5,5)
     b = 40
+    knapsack(w,v,b)
+    print('total calls:')
+    print(numcalls)
+
+def testknapsack6():
+    global numcalls
+    numcalls=0
+    w = (1,1,5,5,9,3,3,4,4)
+    v = (150,15,10,10,500,9,9,5,5)
+    b = 10
     knapsack(w,v,b)
     print('total calls:')
     print(numcalls)
