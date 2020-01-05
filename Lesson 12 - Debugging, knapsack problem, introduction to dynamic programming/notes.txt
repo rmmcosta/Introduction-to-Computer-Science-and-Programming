@@ -1,0 +1,4 @@
+- taking a problem
+    - formulate the problem
+    - so we can use computing to solve the problem
+- optimization problems

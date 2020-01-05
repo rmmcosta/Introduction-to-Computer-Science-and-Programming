@@ -1,0 +1,341 @@
+Think like a Computer Scientist
+computational mode of thinking
+
+Declarative and Imperative knowledge
+Declarative: statement of fact
+Imperative: description of how to deduce something
+Computer:
+memory (where the sequence of instructions are stored)
+Control
+Alu (arithemetic and logic unit)
+Pc - program counter
+Programming:
+given a fixed set of primitives
+A good programmer can program anything
+Alan Touring gave 6 primitives to do everything
+Touring compatibility
+Python : high level, general purpose and interpreted language
+Syntax 
+legal expressions
+vs 
+semantics
+static
+Which programs are meaningful
+Full
+What does the program mean
+What will happen when i run the program
+Data
+numbers
+Strings
+Booleans
+Operations
++,*
+And, or
+...
+Commands
+assignment statements
+Input/output
+Conditionals (if)
+Loops (while,for)
+
+Good coding style:
+use comments
+Type discipline (avoid type conversions,...)
+In weak typed languages check the type of the variables
+Good variable names
+Test all possible branches
+
+Iterative programs:
+choose a variable to "count"
+Initialize the variable outside the loop
+Define the end test (variable)
+Define the block
+Increment/decrement the variable
+What to do when done
+
+Flow chart:
+Use it to represent the code
+
+Loops:
+ - always make sure that they terminate
+Always make sure that it gives you the right answer
+
+Use defensive programming
+exhaustive enumeration
+
+Collections in python:
+Tuple -> ordered sequence of elements
+Immutable
+foo=(1,2,3,4,5)
+print foo[0] -> 1 selection
+print foo[-1] -> 5 selection
+print foo[1:3] -> (2,3) slicing
+
+python does not have built-in support for arrays
+
+Decomposition and abstraction are very important when building scalable programs
+Decomposition:
+modules that we can reuse
+A way to stricture code
+Abstraction
+structure code in black boxes
+
+Functions:
+break into modules
+Supress detail
+Create new primitives
+
+Python
+def func():
+   if false:
+      return None
+  else:
+     return 5
+
+Brute force algorithms:
+enumerate and check
+...
+
+Farm exercise
+you have pigs(4legs) chickens(2) and spiders(8)
+Given the heads and the legs how many of each do you have
+
+Inside python shell to run a program:
+import firstProgram
+firstProgram.hello()
+
+from firstProgram import xpto
+xpto()
+Dependes on the versions
+
+Python programs can be called scripts when they are intended to be directly called by the user
+Can be called modules if the objective is to import that code in other python code
+
+Recursion:
+base case
+Simples possible solution
+Inductive/recursive step
+Reduce to a smaller version of the same problem
+Fibonacci
+
+Resolve problems iteratively vs recursively
+
+Scientific notation:
+mantissa and exponent
+Computers store numbers as binary
+64bit
+1 bit for the sign
+11 bits for the exponent
+52 bits mantissa
+17 decimal digits of precision
+This applies for floating points
+
+For int numbers python has arbitrary precision. It accepts very big numbers
+Worry about == for floats
+Compare to an aproximation
+abs(a*a-2)< epsilon
+Floating points (real numbers), unlike integers, are uncountable
+For perfect square roots we can use the method guess and check
+starting with i=1 do i*i while that is less than x
+For real numbers we should use the method guess, check and improve
+this is called successive approximation
+guess=initial guess
+for iter in range(100):
+If( f(x) close enough): return the guess
+else: guess=better guess
+return error
+
+Bi-section method
+it's related to binary search
+
+Use regression testing
+
+Sometimes we should worry about speed of convergence
+
+What makes the difference is the way an algorithm deals/performs in a heavy computation
+Always challenge the answers given by the computer
+
+Python non-scalar data types:
+immutable:
+tuples -> (1,2,34,56)
+Strings
+Mutable:
+lists -> [1,2,34,56]
+They point to a position in the memory
+Dictionaries
+Not ordered
+Generalized indexed
+Key value pairs
+Use the hashing technique
+
+Append to a list is different than concatenate lists
+Always try to use pseudocode to solve a problem
+A good practice is to separate implementation from use
+the user from the implementer
+Efficiency - orders of growth
+choice of algorithm
+Map a problem into a class of algorithms 
+Measure space and time
+What is the number of steps needed as a function of input size
+
+Random access model
+the amount of time that i take to  go to a given memory position is constant
+The basic primite types/steps also take a constant time to compute
+Best case -> min
+Worst case -> max
+Expected case -> average
+
+The rate of growth as the size of the problem grows
+asymptotic notation
+Big Oh notation: upper limit to the growth of a function as input gets large
+F(x) E O(n^2)
+n -> measures the size of x
+
+Iterative loop - grows in a linear way O(b)
+Recursive loop - t(b) = ck + t(b-k) 
+c is a constant value
+Done when b-k=1 <=> k=b-1
+O(b) and it's also linear
+
+When we can divide a problem in two it's a good sign that the growth is algoritmic
+For the exponent we can divide on it's even or odd
+O(log2(k)) logarithmic
+For loop inside for loop O(n*m) 
+Or if n=m O(n^2) quadratic
+Towers of hanoi (a problem)
+When you reduce a problem to 2 or 3 or more problems of a minor size
+O(2^n) It grows exponential
+
+Linked lists
+An element points to the next element
+
+Not every language implements lists the same way
+
+Generalize Binary search
+1 take the mid point
+2 check if that point is the answer
+3 reduce to a smaller version of the problem
+4 repeat 
+
+The binary search implies that we need an ordered list
+
+Should we sort before we search?
+Can we sort a list in sub-linear time? No
+Can we sort it in linear time? Probably not
+How fast then? n*log(n)
+
+Should i search the list? Takes linear time -> n
+Or should i sort and search? Takes n*log(n) + log(n)
+
+One time search linear wins
+K times search it's kn vs nlogn + klogn
+and nlogn + klogn wins
+
+Sort algorithms:
+selection sort
+Based on loop invariant
+List split: list prefix (sorted) and list suffix (not sorted)
+Order of growth is O(n^2) quadratic
+Bubble sort
+Order of growth is quadratic O(length^2)
+Selection sort does less swaps than bubble sort 
+Selection sort is more efficient
+
+Divide and conquer algorithms:
+split the problem
+Solve them independently
+Combine the solutions
+A sort algorithm for this is the merge sort
+Merge sort:
+divide the list in two
+Continue until we have only one element (singleton lists)
+Merge of the sub-lists
+Hashing:
+put an one in the position that corresponds to the number
+O(1)
+The order of complexity is constant
+The idea is to map any kind of data into integers
+In python ord() gives the ascii code of the argument
+For strings we can use the rabin karp algorithm
+With hashing we trade space for time
+A good hash function is hard to develop
+Because you want to have an even distribution
+
+Exceptions in Python:
+unhandled
+Handled
+try:
+except:
+In python we can pass the value type (float,int,...) as a parameter and then apply it
+valType(x)
+This allows the code to be polymorphic
+Difference between exception and assert
+Assert:
+pre-conditions
+Post condition
+Testing and Debugging:
+
+Unit testing:
+functions
+Classes
+Integration testing:
+overall program
+Find a test suite:
+small enough (fast)
+large enough (confidence)
+Debugging:
+print statement
+Read the code
+Be systematic
+reduce the search space
+By localizing the source of the problem
+Study the program code:
+Why did he produced the result that he produced
+Is it part of a family
+Scientific method:
+Study the available data
+Test results
+The code itself
+Form hypothesis consistent with all of the data
+Design and run a repeatable experiment
+This has to have the potencial of refuthe hypothesis
+Produce some intermediate results
+Give the expected result
+When you run a program you should know what is expected to happen, what will be the result of running that program
+How to run the experiment (the test):
+Find the simplest input that will lead to a bug
+Find where the bug(s) can be by doing binary search
+Always reduce it in half
+
+Careful when working with lists:
+prevent aliasing when you want to do a copy
+tmp = res <> tmp = res[:]
+assignment vs clonning
+
+Optimization problems:
+a function to maximize (minimize)
+a set of constraints
+find the shortest path
+Examples:
+Traveling sales person (TSP)
+Bin packing
+Sequence alignment
+Knapsack
+Problem reduction
+Solve new problems looking to old ones
+Example - continuous knapsack
+Greedy algorithm
+Max the value at each step
+Brute force algorithm 
+Exhausting all the possibilities and choose the best one
+2^n exponential growth 
+Dynamic programmming
+Overlapping sub-problems
+Solve by using a technique called memoization
+Record 1st time value
+Then look it up subsequently
+Optimal sub structure
+Global optimal solution can be constructed from optimal solutions to sub problems (not always but a lot of times)
+Table lookup it's a technique very used and memoization it's a sub domain of that domain
+Knapsack 0-1 problem
+Decision tree concept
