@@ -2,3 +2,24 @@
     - formulate the problem
     - so we can use computing to solve the problem
 - optimization problems
+    - function (maximize or minimize)
+    - set of constraints
+    examples:
+        - shortest path algorithm
+            (google maps for example)
+        - traveling sales person
+        - bin packing
+        -...
+- greedy algorithm
+    - at a given step we try to maximize the value at that step
+    - locally optimal decisions not always lead to global optimal
+
+- knapsack problem the greedy is good but for 0-1 knapsack greedy is not so good
+- if we try every possible solutions to see what is the better one
+were we could take the best relation between items weight and price
+we would end it up with an exponential problem to solve
+
+- there's where dynamic programming comes to the rescue
+    - very useful to solve exponential problems that on the surface are very difficult
+    - overlapping subproblems
+    - optimal substructure

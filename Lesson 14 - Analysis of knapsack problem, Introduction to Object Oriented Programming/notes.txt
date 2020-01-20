@@ -1,0 +1,47 @@
+optimal substructure:
+    - We can get global optimal solutions with local optimal solutions
+    - but not for all problems
+- pseudo polynomial algorithm
+    - polynomial in the size of the solution
+    - running time that is polynomial in numerical value of the input
+- polynomial algorithm:
+    - polynomial in the size of the inputs
+
+Todo:
+    - do the algorithm for the knapsack but
+    with the constraint of volume 
+
+In Dynamic programing:
+    - we trade time for space
+
+- don't be scared with exponential difficult problems
+    big o 2^n
+
+- if a problem can be solved with recursion
+    - probable it can be solved with dynamic programming
+
+- Apply problem reduction
+
+-/-
+
+Modularity:
+    - Module
+        - collection of related functions
+        - functions that belong to modules are referenced
+        with '.'
+    - Object Oriented programming
+        - used with python for data abstractions
+        - abstract data types
+    - object:
+        - collection of data
+        - and functions
+    - user defined types
+    - encapsulation
+        - capsules with:
+            - data and methods
+    - message passing metaphor
+        - objects communicate
+    - instances
+    - class:
+        - collection of objects
+        - with characteristics in common

@@ -1,0 +1,39 @@
+- The way we solve problems with computers can be very different
+from the way we solve problems without them
+- From now on we will be talking about general techniques to solve 
+hard problems using computers
+- Learn how to move from an informal problem description
+to a more formal/rigorous problem statement
+
+- Learn how to invent computational models
+    - model the real world somehow
+    - the program is just a mechanism to help us
+    understand the world better
+    - by doing this we will be dealing with & exploiting randomness
+    - we can face/have stochastic processes:
+        - processes with a lot of possibilities/outcomes/variables
+        - processes sometimes with infinite possibilities/directions
+        even though sometimes the initial conditions are known
+    - build stochastic models
+
+- making sense of data
+- In the a couple of lessons we will be evaluating the quality of answers
+    - are our outcomes correct?
+
+- Random walk simulation:
+    - Always start with the simple model
+    - cartesian coordinates
+    - a drunk student
+    - he can only go North, South, West, East
+    - we need to do a program that simulates a random walk
+        - present the coordinates after each run
+        - what are the appropriate data abstractions
+    - possible classes:
+        - Location (coordinates where the person is)
+        - Direction (Compass point, for now N,S,E,W)
+        - Field (where the locations is represented)
+        - Drunk (the person that will move)
+    - we can use random.choice from python to choose an element from a list or a tupple
+
+    - in python install the packages with pip
+        - for python3: pip3 install -U matplotlab (for example)

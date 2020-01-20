@@ -1,0 +1,12 @@
+optimal substructure:
+    - We can get global optimal solutions with local optimal solutions
+    - but not for all problems
+- pseudo polynomial algorithm
+    - polynomial in the size of the solution
+    - running time that is polynomial in numerical value of the input
+- polynomial algorithm:
+    - polynomial in the size of the inputs
+
+Todo:
+    - do the algorithm for the knapsack but
+    with the constraint of volume 

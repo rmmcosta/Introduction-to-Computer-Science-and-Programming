@@ -1,0 +1,45 @@
+- classes and obejct oriented programming
+- very powerful way of organizing/structure systems
+- in this lesson you're going to talk about inheritance, shadowing, iterators
+- class: 
+    - template for abstract data types
+    - cluster data together
+        - modularity/abstraction
+    - and methods
+    - data hiding - access data trough specific methods not directly
+        - python doesn't support this in the same way other languages support
+    - used to make instances 
+        - instances with attributes
+    - superclass vs subclass
+
+- in python console we can use dir(class) to see a description of that 
+class: methods, etc.
+- in python 3 we don't have the cmp method
+    - we can do import operator and use the methods that operator has:
+        - eq
+        - lt
+        - gt
+        - etc.
+    - but to have the exactly same behavior that cmp in python 2 
+    we can do the following:
+        def cmp(a,b):
+            return (a > b) - (a < b)
+
+- In python3 we can have class methods and variable and instance methods and variables
+    - class methods don't receive the self and must be accessed by using the class name
+    - class variable must be accessed using the class name even inside the class itself
+
+- Using Shadowing, we can provide a new implementation to base class member 
+without overriding it, which means that the original implementation 
+of base class member gets shadowed (hidden) with the new implementation 
+of base class member provided in derived class.
+
+- shadowing (method hiding) vs overriding (overrides for instance the parent method) 
+
+- in python3 the has_key was removed
+    - we should use 'in' instead
+
+- use the idea of encapsulation
+
+- oop is great when you have modular systems with well defined units
+with very specific ways of communicating/interacting between themselves

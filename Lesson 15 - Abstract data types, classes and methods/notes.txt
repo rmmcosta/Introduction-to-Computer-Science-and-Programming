@@ -1,0 +1,21 @@
+classes:
+    - templates for creating instances of a given type
+    - in python we can define a class with empty body:
+        class xpto:
+            pass
+    - pass is the keyword to say that the class is unimplemented
+    - instances have internal attributes
+
+- shallow equality (is - the object is the same, i.e. points to the same piece of memory)
+    - same as object equality
+- deep equality (the values, the attributes)
+    - same as value equality
+- data hiding (a.k.a encapsulation):
+    - one can only access instance values through defined methods
+    - python doesn't do this
+    - but we can adopt some conventions to limit it
+        - use _ to "declare" an instance variable as protected
+        - use __ to "declare" an instance variable as private
+- python also has operator overloading
+
+- finished
