@@ -1,0 +1,29 @@
+classify simulation models:
+    - stochastic vs deterministic
+        - in a deterministic simulation we should get the same result every time 
+        we run it
+    - static vs dynamic
+        - in a dynamic situation times plays a role
+        and you look at how things evolve over time
+            - for example queing network model
+                - very important for scheduling and planning
+        - in a static simulation there is no issue of time
+    - discrete vs continuous
+
+Monte carlo simulations (stochastic, dynamic and discrete):
+    - inferential statistics
+        - random samples of one population tends to exhibit
+        the same properties as the rest of that population
+        - Is this true???
+        not always :)
+
+- we can use simulations to understand what might happen
+but also to understand the current state of the world
+
+-note: python can give us the operating system 
+    - by importing os we can know with the name value
+    if it's a mac or a posix or a nt
+    - and also can give us the platform
+    import platform
+    platform.system()
+        - can give us linux, windows, darwin

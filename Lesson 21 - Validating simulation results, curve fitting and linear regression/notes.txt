@@ -1,0 +1,49 @@
+- how many samples do we need to get a correct answer
+- how accurate is that answer
+- statiscal valid answers are different then correct answers
+- what are the best assumptions
+- check the answer against the physical reality
+- use computers to model the real world
+    - data
+    - models to explaing the data (at least they claim to do it)
+    - consequences that follow from those models
+
+- In this lesson we will simulate the spring behavior:
+    - we have the spring constant (tells the stiffness)
+    - k=deltaF/deltaX
+    - Hooke's law:
+        F = -k*x
+
+- real data doesn't fit exctly the experiment
+because there is always an error factor
+- use linear regression to fit a line to the points
+    - we need an objective function that captures the goodness of a fit
+        - for example the least squares fit
+            - find the line that minimizes the sum of the:
+                (observation(i) - prediction(i))²
+                - by squaring it we are like taking the absolute value
+                - since the error can be minus or plus and so they could cancel 
+                each other
+                - pylab has a way to do this with polyfit
+                    - you have to define the degree of the polynomial
+                    - degree one is -> a*x+b
+                    - the polyfit will return a value for a and a value for b
+                - minimizes the sum of the errors
+    - optimization problem
+    - a line that best fits the objective function
+
+- Linear regression:
+    - doesn't have to be a line
+    - can be for instance a parabola
+    - R² -> coefficient of determination
+    - R² = explainded variation/total variation
+    or R² = 1 - (EE/DD)
+        - EE -> errors in the estimation
+        - DV -> data variance - the difference between the measured data and the mean of 
+        the data
+        - for example an R² = 0.9 means that 90% of the variations can 
+        be explained by the model
+        - the others 10% can be experimental errors or the existence of 
+        lurking variables (variable that are not reflected on the model)
+    - careful with over fitting the data
+        - specially when you have complex models for a small sample

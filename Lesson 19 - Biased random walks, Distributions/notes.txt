@@ -1,0 +1,30 @@
+- biased random walks
+- plot the data is a good way to understand and interpret 
+that data
+- focus on stochastic things
+
+- always isolate decisions in small parts of the programs
+- that makes easier to change things in the future
+- a small bias can make a lot off difference after a given amount of time
+- we should never ignore the data
+    - we should explore the data and try to make sense out of it
+
+- use an histogram to get a notion of the distribution of the data
+
+- computer simulation
+    - manhattan project
+        - nuclear bombs simulation
+        - nuclear detonation
+
+- monte carlo simulation
+- Generate a sample of representative scenarios
+    - because we can't use exaustive enumeration to do them all
+
+- the simulation will create a virtual device that act as the 
+real one in important aspects
+
+- simulations are:
+    - descriptive not prescriptive
+    - they describe the situation they don't tell the exact answer
+    - optimization is for prescriptive approachs
+    - for a starting point it will give you the consequences

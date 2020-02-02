@@ -1,0 +1,47 @@
+- All the simulations have a similar structure:
+    1 - we start with an inner loop
+    that simulates one trial (can be to call a method/function for a given object)
+    2 - "Enclose" inner loop in another loop 
+    that conducts appropriate number of trials
+    3 - Calculate and present relevant statistics about the trials
+
+- to install your one package and make it globally available you can do the 
+following:
+    python3 cenas.py install
+
+- when doing charts don't forget the labels
+- in the end of a computation ask if the answer makes sense
+    - is it consistent with other evidences
+- be systematic with debug
+    - use simple examples first
+
+- Random walk type thing can be used to solve other problems
+    - for example Brownian motion
+        - the path of a molecule as it travels in a liquid
+        or a gas
+    - for example to model the stock market
+    - model evolution
+
+- when using pylab we can draw the chart in another figure using:
+    - pylab.figure()
+- we can also give instructions to plot
+    plot([10,20,30,40],[3,6,9,12],'ro')
+    #first the x values, then the y values and in the end
+    the instructions red o
+- pylab was built on top of numPy
+- in numPy an array is basically a matrix
+- import numpy
+  numpy.arange(2)
+    - gives us an array of ints
+    - in this case ([0,1])
+    - i believe that basically this is a list of arrays
+- we can also do it like this:
+    xpto = numpy.array([5,23,12])
+    coiso = numpy.array([5,23,12])
+    - tuple we must use ()
+    - list we must use [] 
+    if we compare two array it will return an array
+    with the comparation for each value
+    - xpto == coiso
+    returns 
+    array([True, True, True])

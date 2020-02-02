@@ -10,10 +10,14 @@ class Location:
         self._inity = inity
 
     def getInitialCoordinates(self):
-        return '(' + str(self._initx) + ', ' + str(self._inity) + ')'
+        return (self._initx, self._inity)
+
+    def setCoordinates2Initial(self):
+        self._x = self._initx
+        self._y = self._inity
 
     def getCurrentCoordinates(self):
-        return '(' + str(self._x) + ', ' + str(self._y) + ')'
+        return (self._x, self._y)
 
     #inc and dec methods
 
@@ -71,11 +75,40 @@ class Direction:
         else:
             print('End of the field in X reached!') 
 
-    def goWeast(self,location,steps):
+    def goWest(self,location,steps):
         if(location.previewDecX(steps) >= self._field.getMinX()):
             location.decX(steps)
         else:
             print('Begin of the field in X reached!') 
+
+class SpaceDirection(Direction):
+    def goHome(self,location):
+        location.setCoordinates2Initial()
+        #print('go home')
+        #print('location object', location)
+        #print(location.getCurrentCoordinates())
+
+    def shouldGoHome(self, location):
+        #print('should go home')
+        currCoordinates = location.getCurrentCoordinates()
+        if(abs(currCoordinates[0])==abs(currCoordinates[1])):
+            self.goHome(location)
+
+    def goNorth(self, location, steps):
+        super().goNorth(location, steps)
+        self.shouldGoHome(location)
+
+    def goSouth(self, location, steps):
+        super().goSouth(location, steps)
+        self.shouldGoHome(location)
+
+    def goEast(self, location, steps):
+        super().goEast(location, steps)
+        self.shouldGoHome(location)
+
+    def goWest(self, location, steps):
+        super().goWest(location, steps)
+        self.shouldGoHome(location)
 
 class Field:
     def __init__(self,minx,miny,maxx,maxy):
@@ -98,11 +131,12 @@ class Field:
 
 class Drunk:
 
-    def __init__(self,name,x,y):
+    def __init__(self, name, x, y, DirectionType=Direction):
         self._location = Location(x,y)
+        #print('location object',self._location)
         self._name = name
         self._field = Field(-1000,-1000,1000,1000)
-        self._direction = Direction(self._field)
+        self._direction = DirectionType(self._field)
         self._step = 1
         self._locations = ['0,0']
         self._distances = [0.0]
@@ -120,10 +154,12 @@ class Drunk:
         elif(choice==3):
             self._direction.goEast(self._location,self._step)
         else:
-            self._direction.goWeast(self._location,self._step)
+            self._direction.goWest(self._location,self._step)
 
         self._locations.append(self._location.getCurrentCoordinates())
         self._distances.append(self._location.getCurrentDistance())
+        
+        return self._location.getCurrentCoordinates()
 
     def printLocations(self):
         print(self._locations)
@@ -137,17 +173,28 @@ class Drunk:
     def getDistances(self):
         return self._distances
 
+    def getCurrentDistance(self):
+        return self._location.getCurrentDistance()
+
+    def getCurrentCoordinates(self):
+        return self._location.getCurrentCoordinates()
+
 class Chart:
     def __init__(self):
         self._pylab = pylab
 
-    def addPlot(self,points):
-        self._pylab.plot(points)
+    def addPlot(self,points,customLabel=''):
+        self._pylab.plot(points,label=customLabel)
 
-    def show(self, title, xaxisTitle, yaxisTitle):
+    def show(self, title, xaxisTitle, yaxisTitle, showLegend=False):
         self._pylab.title(title)
         self._pylab.xlabel(xaxisTitle)
         self._pylab.ylabel(yaxisTitle)
+        
+        if(showLegend):
+            self._pylab.legend()
+
         self._pylab.show()
+        
 
         
