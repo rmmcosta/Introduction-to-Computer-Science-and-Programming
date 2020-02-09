@@ -1,0 +1,25 @@
+- Normal distribution:
+    - can be discribed with just two numbers
+        - the mean
+        - and the standard deviation
+            - represents the statistical dispersion
+    - we have the notion of empirical rule
+        - 1 standard deviation, 2 standard deviations, 3 standard deviations
+        - 68% of the data, 95%, 99.7%
+
+- the game of craps
+
+- more symmetric distributions:
+    - Uniform distribution
+        - each value in the distribution is equal likely
+    - exponential distribution 
+        - for instance requests for a web page
+
+- always look at the data, not just the mean and the deviation
+- correlation does not imply causation
+- careful with non-response bias
+    - it means that sometimes the sample is not representative of what
+    we thinks it is
+- data enhancement:
+    - don't read more into the data than it actually implies
+    - always place the data in context

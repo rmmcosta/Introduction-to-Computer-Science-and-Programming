@@ -1,0 +1,40 @@
+- Texas sharpshooter fallacy
+    - take the shots and then draw the target around those shots
+
+- stock market simulation:
+    - we can have either:
+        - an indexed portfolio
+            - own all of the stocks that there are
+            - if the stock market goes up I win money
+            - if the stock market goes down I loose money 
+            - betting in the market as a whole
+        - or a managed portfolio:
+            - hire someone to manage in which stock markets to invest
+
+    - the model to represent it:
+        - efficient market hypothesis
+            - the markets are informationally efficient
+                - current prices reflect all publicly known
+                information about each stock
+                - and therefore are unbiased
+                - if the stock is overpriced the people would sell and 
+                the price would come down
+                - if the stock is underpriced the people would buy and
+                the price would come up
+            - stocks are adjusted for risk
+                - the more the risk, the more the fluctuation
+            - so stocks have a distribution attached to them
+        - what are the classes that I might want to have
+            - stock
+            - market
+
+        - how to change the price:
+            - in a multiplicative way
+            - the change is related with the stock price
+            - the other way would be to do an additive way
+                - but this is for cases when the change doesn't have to 
+                do with current value
+        
+        - is the price chcange really memoryless:
+            - Poisson distribution
+            - past behavior has no impact on future behavior
