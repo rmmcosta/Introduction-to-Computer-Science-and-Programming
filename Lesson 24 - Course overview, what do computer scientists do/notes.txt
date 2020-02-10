@@ -1,0 +1,10 @@
+- Computational thinking
+- next courses to take:
+    - 6.01
+    - 6.034 Artificial Intelligence
+        - https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/
+    - 6.005 Software Construction
+        - https://ocw.mit.edu/ans7870/6/6.005/s16/
+        - https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-005-software-construction-spring-2016/
+    - 6.006 Introduction to Algorithms
+        - https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/
